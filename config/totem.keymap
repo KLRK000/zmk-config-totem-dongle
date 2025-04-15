@@ -35,6 +35,27 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        SHRT {
+            bindings = <&mo 4>;
+            key-positions = <20 21>;
+        };
+
+        nxtline {
+            bindings = <&kp RETURN>;
+            key-positions = <34 35>;
+        };
+
+        tbz {
+            bindings = <&kp TAB>;
+            key-positions = <20 10>;
+        };
+
+        mute {
+            bindings = <&kp K_MUTE>;
+            key-positions = <0 10>;
+            layers = <1>;
+        };
     };
 
     keymap {
@@ -59,10 +80,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q       &kp W       &kp E             &kp R        &kp T      &kp Y    &kp U        &kp I        &kp O       &kp P
-               &mt LGUI A  &mt LALT S  &mt LCTRL D       &mt LSHFT F  &kp G      &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
-&mt ESC GRAVE  &kp Z       &kp X       &kp C             &kp V        &kp B      &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                       &mt ENTER DELETE  &lt 1 SPACE  &kp TAB    &kp ESC  &lt 2 ENTER  &kp BSPC
+                  &kp Q       &kp W       &kp E             &kp R        &kp T      &kp Y            &kp U            &kp I        &kp O       &kp P
+                  &mt LGUI A  &mt LALT S  &mt LCTRL D       &mt LSHFT F  &kp G      &kp H            &mt RSHFT J      &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
+&mt ESC CAPSLOCK  &kp Z       &kp X       &kp C             &kp V        &kp B      &kp N            &kp M            &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
+                                          &mt ENTER DELETE  &lt 1 SPACE  &kp TAB    &mt ENTER SPACE  &lt 2 BACKSPACE  &kp BSPC
             >;
         };
 
@@ -93,13 +114,14 @@
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+        Symbol {
+            // ┌───────────────────────────────────────────────────────────┐
 
-                colemakdh_layer {
-// ┌───────────────────────────────────────────────────────────┐
-label= "COLEMAKDH"                                               ;
-// └───────────────────────────────────────────────────────────┘
+            label = "Symbol";
+
+            // └───────────────────────────────────────────────────────────┘
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃   ┃     J     ┃     L     ┃     U     ┃     Y     ┃     ;     ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
@@ -111,10 +133,10 @@ label= "COLEMAKDH"                                               ;
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                        &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS        &kp ASTERISK  &kp SQT     &kp DQT
-                        &trans    &trans  &trans    &trans    &kp UNDERSCORE    &kp MINUS  &kp LS(RA(N4))  &kp RA(N5)    &kp RA(N4)  &kp EQUAL
-&kp LC(LG(LEFT_ARROW))  &trans    &trans  &trans    &trans    &trans            &trans     &trans          &trans        &trans      &trans     &kp LC(LG(RIGHT))
-                                          &trans    &trans    &mo 3             &trans     &trans          &trans
+                        &kp EXCL  &kp AT  &kp HASH    &kp DLLR    &kp PRCNT         &kp CARET  &kp AMPS        &kp ASTERISK  &kp SQT     &kp DQT
+                        &trans    &trans  &trans      &trans      &kp UNDERSCORE    &kp MINUS  &kp LS(RA(N4))  &kp RA(N5)    &kp RA(N4)  &kp EQUAL
+&kp LC(LG(LEFT_ARROW))  &trans    &trans  &trans      &trans      &bt BT_CLR        &trans     &trans          &trans        &trans      &trans     &kp LC(LG(RIGHT))
+                                          &bt BT_PRV  &bt BT_NXT  &mo 3             &trans     &trans          &trans
             >;
         };
 
@@ -141,6 +163,15 @@ label= "COLEMAKDH"                                               ;
         &bootloader  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans       &trans        &trans     &trans          &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans     &trans          &trans    &trans  &trans  &trans
+            >;
+        };
+
+        SHRT {
+            bindings = <
+        &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
+        &trans        &kp C_AC_SAVE  &trans        &trans        &trans    &trans        &trans  &trans  &trans  &trans
+&trans  &kp K_UNDO    &kp K_CUT      &kp K_COPY    &kp K_PASTE   &trans    &kp C_AC_NEW  &trans  &trans  &trans  &trans  &trans
+                                     &trans        &trans        &trans    &trans        &trans  &trans
             >;
         };
     };
